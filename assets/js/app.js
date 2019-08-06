@@ -22,19 +22,30 @@ $(document).ready(function() {
             // add a button to the buttons div 
             $("#buttons").append(a);
             
-        // } console.log(a);
+        } console.log(a);
     } 
+
 // when a word is typed in form a new button will populate
-    
+    $("#add-destination").on("click", function() {
+        // save new destination in var loadedDestinations
+        var newDestination = $("#destination-input").val().trim();
+        // add destination from input text
+        loadedDestinations.push(newDestination);
+        // run makeButton function to make new button for new movie
+        makeButton();
+        event.preventDefault(); //***************** Diff from this or return false; ??? */
+    })
 // when a button is clicked, 10 gifs will appear as still images
 // each gif will have its rating displayed
 // when a gif is clicked individually, it will be an active gif
 // when a gif is clicked again it will be a still image
 
+// 
+// 
+// 
+// 
+// 
+
+    makeButton()
 })
 
-// 
-// 
-// 
-// 
-// 
