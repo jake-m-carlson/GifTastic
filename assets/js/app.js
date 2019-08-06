@@ -51,12 +51,49 @@ $(document).ready(function() {
         $.ajax({
             url: queryURL,
             method: "GET"
+            // generate list of 10 gifs of selected button keyword
         }).done(function(response) {
-            console.log(response);
+            // isolate only the data of each gif 
+            console.log(response.data);
+            // create var of the array made by button selection 
+            var destinationResult = response.data;
+            
+            // create for loop for the array made
+            for ( var i = 0; i < destinationResult.length; i++) {
+                // actually set up gif to display
+                // new var to create new div w/ class of places
+                var destinationDiv = $("<div class =places>");
+                // new var for the image
+                var destinationGif = $("<img>");
+                // print out gifs from the api array as still image
+                destinationGif.attr('src', destinationResult[i].images.fixed_height_still.url);
+                // assign still attr to gif
+                destinationGif.attr('data-still', destinationResult[i].images.fixed_height_still.url);
+                // assign animated attr to gif
+                destinationGif.attr('data-animated',destinationResult[i].images.fixed_height.url);
+                // asign data-state to still
+                destinationGif.attr("data-state", "still");
+                // add class to images
+                destinationGif.addClass('gif');
+                // append to html
+                destinationDiv.append(destinationGif)
+
+                // each gif will have its rating displayed
+                // new var for rating
+                var rating = destinationResult[i].rating
+                // this var creates p tag to place rating
+                var destinationRating = $("<p>").text("Rating: " +rating);
+                destinationDiv.append(destinationRating)
+
+                // print new desinationDiv to the #images div on html
+                // it will include the rating, image, and the new div that was created
+                $("#images").prepend(destinationDiv);
+            }
         })
     } 
-// each gif will have its rating displayed
 // when a gif is clicked individually, it will be an active gif
+
+
 // when a gif is clicked again it will be a still image
 
 // 
