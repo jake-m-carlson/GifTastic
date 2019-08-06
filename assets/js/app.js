@@ -40,11 +40,20 @@ $(document).ready(function() {
     function displayGifs() {
         $("#images").empty();
         // api set up
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + destination + "&api_key=" + apiKey + "&limit=10";
+        // fixed error issue w/ wrong url undefined, var have to be in order
+        // ie queryURL has to be after apikey & destination, otherwise won't work
         var destination = $(this).attr("data-name");
         var apiKey = "ePu4sAeJ3pnzZxSW4crhvYCK0zZwNzug";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + destination + "&api_key=" + apiKey + "&limit=10";
         console.log(destination);
-        displayGifs()
+    
+        // ajax request
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).done(function(response) {
+            console.log(response);
+        })
     } 
 // each gif will have its rating displayed
 // when a gif is clicked individually, it will be an active gif
@@ -54,8 +63,9 @@ $(document).ready(function() {
 // 
 // 
 // 
-// 
-
+    // Listener created for click event to all .destinations elements
+    $(document).on("click", ".destinations", displayGifs);
+    // Calls makeButton function to display starting buttons
     makeButton()
 })
 
