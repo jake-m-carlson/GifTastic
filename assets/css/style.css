@@ -2,8 +2,8 @@ body {
     background: url(../images/airplane.jpg);
 }
 #container {
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-left: 9%;
+    margin-right: 9%;
 }
 .destinations {
     width: 10%;
@@ -12,7 +12,7 @@ body {
     margin: 15px;
 }
 .places {
-    width: 31%;
+    width: 28%;
 }
 h1 {
     margin: 2%;
@@ -22,10 +22,12 @@ h1 {
 img {
     width: 100%;
     height: auto;
+    /* margin: 5%; */
 }
 #images {
     display: flex;
     flex-wrap: wrap;
+    /* margin: 5%; */
     
 }
 /* style buttons, color, font  */
