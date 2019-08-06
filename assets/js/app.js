@@ -88,8 +88,9 @@ $(document).ready(function () {
                 // print new desinationDiv to the #images div on html
                 // it will include the rating, image, and the new div that was created
                 $("#images").prepend(destinationDiv);
-            } //console.log(destinationResult[i].images.fixed_height_still.url);
-        })
+            } console.log(destinationResult[i].images.fixed_height_still.url);
+            // ******************** why doesn't console.log above work & show error? .images = undefined??
+        }) 
     }
 
     // when a gif is clicked individually, it will be an active gif
@@ -108,7 +109,8 @@ $(document).ready(function () {
         else {
             $(this).attr('src', $(this).data('still'));
             $(this).attr('data-state', 'still');
-        }
+        } console.log(state);
+        
     })
 
     // ********* this code below nor above works to animate :(  ******************
