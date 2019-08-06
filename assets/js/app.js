@@ -111,6 +111,18 @@ $(document).ready(function () {
         }
     })
 
+    // ********* this code below nor above works to animate :(  ******************
+    // $(".gif").on("click", function() {
+    //     var state = $(this).attr("data-state");
+    //     if (state === "still") {
+    //         $(this).attr("src", $(this).attr("data-animate"));
+    //         $(this).attr("data-state", "animate");
+    //     } else {
+    //         $(this).attr("src", $(this).attr("data-still"));
+    //         $(this).attr("data-state", "still");
+    //     }
+    // })
+
     // Listener created for click event to all .destinations elements
     $(document).on("click", ".destinations", displayGifs);
     // Calls makeButton function to display starting buttons
