@@ -44,7 +44,7 @@ $(document).ready(function () {
         // ie queryURL has to be after apikey & destination, otherwise won't work
         var destination = $(this).attr("data-name");
         var apiKey = "ePu4sAeJ3pnzZxSW4crhvYCK0zZwNzug";
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + destination + "&api_key=" + apiKey + "&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + destination + "&api_key=" + apiKey + "&limit=10";
         console.log(destination);
 
         // ajax request
@@ -71,6 +71,7 @@ $(document).ready(function () {
                 destinationGif.attr('data-still', destinationResult[i].images.fixed_height_still.url);
                 // assign animated attr to gif
                 destinationGif.attr('data-animate', destinationResult[i].images.fixed_height.url);
+                console.log(destinationResult[i].images.fixed_height.url);
                 // asign data-state to still
                 destinationGif.attr("data-state", "still");
                 // add class to images
@@ -88,7 +89,8 @@ $(document).ready(function () {
                 // print new desinationDiv to the #images div on html
                 // it will include the rating, image, and the new div that was created
                 $("#images").prepend(destinationDiv);
-            } console.log(destinationResult[i].images.fixed_height_still.url);
+                console.log(destinationResult[i].images.fixed_height_still.url);
+            } 
             // ******************** why doesn't console.log above work & show error? .images = undefined??
         }) 
     }
@@ -100,7 +102,7 @@ $(document).ready(function () {
         var state = $(this).attr('data-state');
         // create if/ else , to change attr state
         // if state is still, change attr to animated 
-        if (state === 'stil') {
+        if (state === 'still') {
             $(this).attr('src', $(this).data('animate'));
             $(this).attr('data-state', 'animate');
         }

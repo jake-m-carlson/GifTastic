@@ -1,0 +1,11 @@
+.places{
+    width: 21%;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+#images{
+    display: flex;
+    flex-wrap: wrap;
+}
