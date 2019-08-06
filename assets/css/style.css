@@ -1,11 +1,36 @@
-.places{
-    width: 21%;
+body {
+    background: url(../images/airplane.jpg);
 }
-img{
+#container {
+    margin-left: 12%;
+    margin-right: 12%;
+}
+.destinations {
+    width: 10%;
+    background-color: aqua;
+    border: solid darkblue 2px;
+    margin: 15px;
+}
+.places {
+    width: 31%;
+}
+h1 {
+    margin: 2%;
+    text-align: center;
+    font-size: 60px;
+}
+img {
     width: 100%;
     height: auto;
 }
-#images{
+#images {
     display: flex;
     flex-wrap: wrap;
+    
 }
+/* style buttons, color, font  */
+/* border around gifs? */
+/* background image for page */
+/* find font for page */
+/*  */
+/*  */
