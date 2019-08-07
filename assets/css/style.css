@@ -1,18 +1,33 @@
 body {
+    font-family: 'Abril Fatface', cursive;
     background: url(../images/airplane.jpg);
+}
+form {
+    padding: 1%;   
 }
 #container {
     margin-left: 9%;
     margin-right: 9%;
+    text-align: center;
+}
+#add-destination {
+    padding: 3px;
+    width: 15%;
+    margin: 1%;
+    background-color: aquamarine;
+    border: solid midnightblue 2px;
 }
 .destinations {
     width: 10%;
     background-color: aqua;
     border: solid darkblue 2px;
-    margin: 15px;
+    margin: 6px;
+
 }
 .places {
     width: 28%;
+    padding: 2%;
+
 }
 h1 {
     margin: 2%;
