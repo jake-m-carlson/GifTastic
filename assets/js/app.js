@@ -1,20 +1,20 @@
 // Page loads w/ some buttons already entered
 $(document).ready(function () {
 
-    console.log("AAAAAAAAAAA");
-    $.ajax({
-        method: "GET",
-        url: "https://api.petfinder.com/v2/oauth2/token",
-        data: {
-            grant_type: "client_credentials",
-            client_id: "Z6DABfr5KhZFeIpB7mIVvW2S4fAVkM5BRcxY6gcaXTf8EOSUnD",
-            client_secret: "R0cShtKFsebcFHe65nGGwfHJcRoFHG4JjdzG3pzv"
-        }
-    })
-    .then(function(a) { console.log("YAY", a);})
-    .fail(function(b) { console.log(": (", b); });
+    // console.log("AAAAAAAAAAA");
+    // $.ajax({
+    //     method: "GET",
+    //     url: "https://api.petfinder.com/v2/oauth2/token",
+    //     data: {
+    //         grant_type: "client_credentials",
+    //         client_id: "Z6DABfr5KhZFeIpB7mIVvW2S4fAVkM5BRcxY6gcaXTf8EOSUnD",
+    //         client_secret: "R0cShtKFsebcFHe65nGGwfHJcRoFHG4JjdzG3pzv"
+    //     }
+    // })
+    // .then(function(a) { console.log("YAY", a);})
+    // .fail(function(b) { console.log(": (", b); });
 
-    console.log("UGH");
+    // console.log("UGH");
 
     // Array w/ preloaded button keywords
     var topics = ["Bali", "Mykonos", "Bora Bora", "Phuket", "Galapagos Islands"];
